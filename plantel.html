@@ -1,0 +1,2347 @@
+<!doctype html>
+<html lang="pt" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CD Pedrulhense - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=Oswald:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- NAV PARA MOBILE -->
+    <div class="mobile-topbar">
+      <div class="logo-text" style="color: white; font-size: 16px">
+        CD Pedrulhense
+      </div>
+      <button class="hamburger" id="hamburger-btn">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- SIDEBAR WRAPPER -->
+    <div class="sidebar-wrapper" id="sidebar-wrapper">
+      <aside class="sidebar collapsed" id="sidebar">
+        <a href="index.html" class="sidebar-header">
+          <img
+            src="https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/689855793_1547133337117091_1962531180770860766_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=tNjSuQCMAIEQ7kNvwH1EuLT&amp;_nc_oc=Adqes0H_2BicI1l9JoOQmgGZ1pEv_LDKHIzy7INWaNlcDINisT_aA-rmCYhncdLmf2cJGGEtYWxVhnzSB57wTpik&amp;_nc_zt=23&amp;_nc_ht=scontent.fopo5-2.fna&amp;_nc_gid=bLvzNRn5-bfSFw7XIACbow&amp;_nc_ss=7b289&amp;oh=00_Af_DbABiWfcko3GALc62w8OPXFLPazKanQU2wz77oWZKJg&amp;oe=6A235D38"
+            alt="Logo CD Pedrulhense"
+            class="logo-img"
+          />
+          <span class="logo-text">CD Pedrulhense</span>
+        </a>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item" data-target="inicio">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+            </svg>
+            <span class="nav-label">Início</span>
+          </a>
+          <a href="noticias.html" class="nav-item" data-target="noticias">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+              ></path>
+            </svg>
+            <span class="nav-label">Notícias</span>
+          </a>
+          <a href="clube.html" class="nav-item" data-target="clube">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5H6v2h2v5h2v-5h2v-2z"
+              ></path>
+            </svg>
+            <span class="nav-label">Clube</span>
+          </a>
+          <a href="galeria.html" class="nav-item" data-target="galeria">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
+              ></path>
+            </svg>
+            <span class="nav-label">Galeria</span>
+          </a>
+          <a href="calendario.html" class="nav-item" data-target="calendario">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"
+              ></path>
+            </svg>
+            <span class="nav-label">Calendário</span>
+          </a>
+
+          <a href="plantel.html" class="nav-item active" data-target="plantel">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+              ></path>
+            </svg>
+            <span class="nav-label">Plantel</span>
+          </a>
+
+          <a href="formacao.html" class="nav-item" data-target="formacao">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"
+              ></path>
+            </svg>
+            <span class="nav-label">Formação</span>
+          </a>
+
+          <div class="nav-separator"></div>
+
+          <a href="contacto.html" class="nav-item" data-target="contacto">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+            <span class="nav-label">Contacto</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <button class="toggle-btn" id="theme-toggle">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
+              ></path>
+            </svg>
+            <span class="theme-text">Modo Escuro</span>
+          </button>
+          <div class="online-status">
+            <div class="pulse-dot"></div>
+            <span class="online-text">CDP Online</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main class="main-area" id="main-area">
+      <div class="container">
+        <!-- HERO -->
+
+        <!-- ESTATÍSTICAS -->
+
+        <!-- PRÓXIMO JOGO -->
+
+        <!-- NOTÍCIAS -->
+
+        <!-- GALERIA -->
+
+        <!-- CONTACTO -->
+        <!-- PLANTEL PRINCIPAL -->
+
+        <!-- ESTATISTICAS -->
+
+        <!-- FORMAÇÃO -->
+
+        <!-- CONTACT SECTION -->
+
+        <!-- FOOTER -->
+
+        <section id="plantel" class="fade-up">
+          <h2 class="section-title">Plantel Principal</h2>
+
+          <div class="plantel-tabs" id="plantel-tabs">
+            <button class="plantel-tab active" data-filter="all">Todos</button>
+            <button class="plantel-tab" data-filter="guarda-redes">
+              Guarda-Redes
+            </button>
+            <button class="plantel-tab" data-filter="defesas">Defesas</button>
+            <button class="plantel-tab" data-filter="medios">Médios</button>
+            <button class="plantel-tab" data-filter="avancados">
+              Avançados
+            </button>
+          </div>
+
+          <div class="squad-group" data-position="guarda-redes">
+            <h3 class="position-title" style="margin-top: 0">Guarda-Redes</h3>
+            <div class="squad-grid" style="margin-bottom: 32px">
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/92/95/789295_luis_abrantes_20260226155924.jpg"
+                    alt="Luís Abrantes"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">1</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">19</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div
+                        class="stats-grid"
+                        style="grid-template-columns: repeat(3, 1fr)"
+                      >
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos Sofridos">
+                          <div class="stat-lbl">GS</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div
+                        class="stats-grid"
+                        style="
+                          grid-template-columns: repeat(3, 1fr);
+                          opacity: 0.6;
+                        "
+                      >
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos Sofridos">
+                          <div class="stat-lbl">GS</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="19"
+                  data-jogos="0"
+                  data-golossofridos="0"
+                  data-minutos="0"
+                >
+                  <div class="player-name">Luís Abrantes</div>
+                  <div class="player-position">Guarda-Redes</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/90/13/369013_vasco_teixeira_20240819101958.jpg"
+                    alt="Vasco Teixeira"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">24</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">28</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div
+                        class="stats-grid"
+                        style="grid-template-columns: repeat(3, 1fr)"
+                      >
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">26</div>
+                        </div>
+                        <div class="stat-box" title="Golos Sofridos">
+                          <div class="stat-lbl">GS</div>
+                          <div class="stat-val">20</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">2340</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div
+                        class="stats-grid"
+                        style="
+                          grid-template-columns: repeat(3, 1fr);
+                          opacity: 0.6;
+                        "
+                      >
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos Sofridos">
+                          <div class="stat-lbl">GS</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="28"
+                  data-jogos="26"
+                  data-golossofridos="20"
+                  data-minutos="2340"
+                >
+                  <div class="player-name">Vasco Teixeira</div>
+                  <div class="player-position">Guarda-Redes</div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/17/43/431743_pedro_correia_20240819104045.jpg"
+                    alt="Pedro Correia"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">97</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value"></span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div
+                        class="stats-grid"
+                        style="grid-template-columns: repeat(3, 1fr)"
+                      >
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val"></div>
+                        </div>
+                        <div class="stat-box" title="Golos Sofridos">
+                          <div class="stat-lbl">GS</div>
+                          <div class="stat-val"></div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div
+                        class="stats-grid"
+                        style="
+                          grid-template-columns: repeat(3, 1fr);
+                          opacity: 0.6;
+                        "
+                      >
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos Sofridos">
+                          <div class="stat-lbl">GS</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade=""
+                  data-jogos=""
+                  data-golossofridos=""
+                  data-minutos=""
+                >
+                  <div class="player-name">Pedro Correia</div>
+                  <div class="player-position">Guarda-Redes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="squad-group" data-position="defesas">
+            <h3 class="position-title">Defesas</h3>
+            <div class="squad-grid" style="margin-bottom: 32px">
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/09/06/770906_david_carvalho_20240819102615.jpg"
+                    alt="Defesa"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">2</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">26</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">27</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">4</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">2294</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="26"
+                  data-jogos="27"
+                  data-golos="0"
+                  data-assist="4"
+                  data-minutos="2294"
+                >
+                  <div class="player-name">David Carvalho</div>
+                  <div class="player-position">Defesa</div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/58/1259958_kevin_pires_1696262467.jpg"
+                    alt="Defesa Central"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/br.png"
+                    alt="Brasil"
+                    class="player-flag"
+                  />
+                  <div class="player-number">3</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">22</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">7</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">299</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="22"
+                  data-jogos="7"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="299"
+                >
+                  <div class="player-name">Kevin Pires</div>
+                  <div class="player-position">Defesa Central</div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/33/46/793346_tiago_gomes_20240819102308.jpg"
+                    alt="Defesa"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Porugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">4</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">24</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">31</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">3</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">2790</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="24"
+                  data-jogos="31"
+                  data-golos="3"
+                  data-assist="0"
+                  data-minutos="2790"
+                >
+                  <div class="player-name">Tiago Gomes</div>
+                  <div class="player-position">Defesa</div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/62/95/666295_mauro_coelho_20241031151329.jpg"
+                    alt="Lateral Direito"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">7</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">12</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">2</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">543</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="12"
+                  data-golos="0"
+                  data-assist="2"
+                  data-minutos="543"
+                >
+                  <div class="player-name">Mauro Coelho</div>
+                  <div class="player-position">Lateral Direito</div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/00/15/480015_fabio_oliveira_20240819103152.jpg"
+                    alt="Latral Esquerdo"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">11</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">29</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">19</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">6</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1686</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="29"
+                  data-jogos="19"
+                  data-golos="6"
+                  data-assist="0"
+                  data-minutos="1686"
+                >
+                  <div class="player-name">Fábio Oliveira</div>
+                  <div class="player-position">
+                    Lateral Esquerdo/Médio Esquerdo
+                  </div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/09/09/770909_luis_simoes_20240819103430.jpg"
+                    alt="Defesa"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">17</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">25</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">25</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1972</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="25"
+                  data-jogos="25"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="1972"
+                >
+                  <div class="player-name">Luis Simões</div>
+                  <div class="player-position">Defesa</div>
+                </div>
+              </div>
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/61/57/596157_bernardo_fonseca_20240910161942.jpg"
+                    alt="Defesa Central/Lateral Direito"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">6</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">25</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">26</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">2</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1810</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="25"
+                  data-jogos="26"
+                  data-golos="2"
+                  data-assist="0"
+                  data-minutos="1810"
+                >
+                  <div class="player-name">Bernardo Fonseca</div>
+                  <div class="player-position">
+                    Defesa Central/Lateral Direito
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="squad-group" data-position="medios">
+            <h3 class="position-title">Médios</h3>
+            <div class="squad-grid" style="margin-bottom: 32px">
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/72/1026672_john_muroki.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/ke.png"
+                    alt="Quénia"
+                    class="player-flag"
+                  />
+                  <div class="player-number">8</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">22</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">14</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">513</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="22"
+                  data-jogos="14"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="513"
+                >
+                  <div class="player-name">John Muroki</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/72/84/677284_joao_sousa_20240819104340.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">10</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">28</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">24</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">4</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1656</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="28"
+                  data-jogos="24"
+                  data-golos="4"
+                  data-assist="1"
+                  data-minutos="1656"
+                >
+                  <div class="player-name">João Sousa</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/14/98/731498_joao_basilio_20240920120745.jpg"
+                    alt="Médio Esquerdo/Médio Ofensivo"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">14</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">21</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">15</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">595</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="21"
+                  data-jogos="15"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="595"
+                >
+                  <div class="player-name">João Basílio</div>
+                  <div class="player-position">
+                    Médio Esquerdo/Médio Ofensivo
+                  </div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/59/27/905927_santiago_cruz_20250704161819.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">19</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">19</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">20</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1459</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="19"
+                  data-jogos="20"
+                  data-golos="1"
+                  data-assist="0"
+                  data-minutos="1459"
+                >
+                  <div class="player-name">Santiago Cruz</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/55/01/1435501_hugo_batalha_20260209123507.jpg"
+                    alt="Médio Centro/Médio Ofensivo"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">20</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">25</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1086</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="25"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="1086"
+                >
+                  <div class="player-name">Hugo Batalha</div>
+                  <div class="player-position">Médio Centro/Médio Ofensivo</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/50/86/675086_joao_crisostomo_20240910162028.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">21</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">26</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">2</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1670</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="26"
+                  data-golos="2"
+                  data-assist="1"
+                  data-minutos="1670"
+                >
+                  <div class="player-name">João Crisóstomo</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/44/803644_20211105201857_joao_santos.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">22</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">21</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">24</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">2</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1438</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="21"
+                  data-jogos="24"
+                  data-golos="2"
+                  data-assist="0"
+                  data-minutos="1438"
+                >
+                  <div class="player-name">João Pedro Santos</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/33/905933_gabriel_carvalho.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">23</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">27</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">4</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1192</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="27"
+                  data-golos="4"
+                  data-assist="1"
+                  data-minutos="1192"
+                >
+                  <div class="player-name">Gabriel Carvalho</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/49/53/674953_tomas_pinto_20241031151418.jpg"
+                    alt="Médio"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">25</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">14</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">861</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="14"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="861"
+                >
+                  <div class="player-name">Tomás Pinto</div>
+                  <div class="player-position">Médio</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/10/49/1341049_valdemar_rocha_20250916111119.png"
+                    alt="Médio Centro/Defesa Central"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">5</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">22</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1536</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="22"
+                  data-golos="1"
+                  data-assist="0"
+                  data-minutos="1536"
+                >
+                  <div class="player-name">Tomás Pinto</div>
+                  <div class="player-position">Médio Centro/Defesa Central</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/07/95/320795_francisco_melo_20240827144921.jpg"
+                    alt="Médio Centro/Médio Ofensivo"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/pt.png"
+                    alt="Portugal"
+                    class="player-flag"
+                  />
+                  <div class="player-number">18</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">26</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">23</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">758</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="26"
+                  data-jogos="23"
+                  data-golos="0"
+                  data-assist="0"
+                  data-minutos="758"
+                >
+                  <div class="player-name">Francisco Melo</div>
+                  <div class="player-position">Médio Centro/Médio Ofensivo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="squad-group" data-position="avancados">
+            <h3 class="position-title">Avançados</h3>
+            <div class="squad-grid" style="margin-bottom: 32px">
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/78/1318078_antonio_mpassa_1701165425.jpg"
+                    alt="Avançado/Extremo Esquerdo"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/ao.png"
+                    alt="Angola"
+                    class="player-flag"
+                  />
+                  <div class="player-number">9</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">11</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">152</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="11"
+                  data-golos="1"
+                  data-assist="0"
+                  data-minutos="152"
+                >
+                  <div class="player-name">António Mpassa</div>
+                  <div class="player-position">Avançado/Extremo Esquerdo</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/75/79/1027579_eder_lopes_20240819103740.jpg"
+                    alt="Avançado"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/cv.png"
+                    alt="Cabo Verde"
+                    class="player-flag"
+                  />
+                  <div class="player-number">14</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">25</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">26</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">1</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">3</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1423</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="25"
+                  data-jogos="26"
+                  data-golos="1"
+                  data-assist="3"
+                  data-minutos="1423"
+                >
+                  <div class="player-name">Éder Lopes</div>
+                  <div class="player-position">Avançado</div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-img-wrapper">
+                  <img
+                    src="https://cdn-img.staticzz.com/img/jogadores/new/72/78/3497278_rafael_furlani_20260119171647.jpg"
+                    alt="Ponta de Lança"
+                  />
+                  <img
+                    src="https://flagcdn.com/w40/br.png"
+                    alt="Brasil"
+                    class="player-flag"
+                  />
+                  <div class="player-number">15</div>
+                  <div class="player-stats-overlay">
+                    <div class="season-stats-container">
+                      <div
+                        class="player-stat-row"
+                        style="
+                          margin-bottom: 8px;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                          padding-bottom: 8px;
+                        "
+                      >
+                        <span class="player-stat-label">Idade</span
+                        ><span class="player-stat-value">20</span>
+                      </div>
+                      <div class="season-stats-header">Época 25/26</div>
+                      <div class="stats-grid">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">14</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">6</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">1094</div>
+                        </div>
+                      </div>
+                      <div
+                        class="season-stats-header"
+                        style="margin-top: 12px; opacity: 0.6"
+                      >
+                        Época 26/27 (Atual)
+                      </div>
+                      <div class="stats-grid" style="opacity: 0.6">
+                        <div class="stat-box" title="Jogos">
+                          <div class="stat-lbl">J</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Golos">
+                          <div class="stat-lbl">G</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Assistências">
+                          <div class="stat-lbl">A</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                        <div class="stat-box" title="Minutos">
+                          <div class="stat-lbl">M</div>
+                          <div class="stat-val">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- store stats in data attributes -->
+                <div
+                  class="player-info"
+                  data-idade="20"
+                  data-jogos="14"
+                  data-golos="6"
+                  data-assist="0"
+                  data-minutos="1094"
+                >
+                  <div class="player-name">Rafael Furlani</div>
+                  <div class="player-position">Ponta de Lança</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer fade-up" data-delay="0">
+          <div class="footer-left">
+            <img
+              src="https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/689855793_1547133337117091_1962531180770860766_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=tNjSuQCMAIEQ7kNvwH1EuLT&amp;_nc_oc=Adqes0H_2BicI1l9JoOQmgGZ1pEv_LDKHIzy7INWaNlcDINisT_aA-rmCYhncdLmf2cJGGEtYWxVhnzSB57wTpik&amp;_nc_zt=23&amp;_nc_ht=scontent.fopo5-2.fna&amp;_nc_gid=bLvzNRn5-bfSFw7XIACbow&amp;_nc_ss=7b289&amp;oh=00_Af_DbABiWfcko3GALc62w8OPXFLPazKanQU2wz77oWZKJg&amp;oe=6A235D38"
+              alt="Logo CD Pedrulhense"
+              class="logo-img"
+            />
+            <div>
+              <strong>CD PEDRULHENSE</strong>
+              <span style="opacity: 0.5; margin-left: 8px"
+                >Orgulho da Pedrulha</span
+              >
+            </div>
+          </div>
+          <div>© 2025 CD Pedrulhense. Todos os direitos reservados.</div>
+          <div class="footer-socials">
+            <a
+              href="https://www.facebook.com/cd.pedrulhense/"
+              target="_blank"
+              class="social-link"
+              ><svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                ></path></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/cdpedrulhense/"
+              target="_blank"
+              class="social-link"
+              ><svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                ></path></svg
+            ></a>
+            <a href="#" class="social-link"
+              ><svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path></svg
+            ></a>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content" id="lightbox-content">
+        <button class="lightbox-close" id="lightbox-close">×</button>
+        <button class="lightbox-btn lightbox-prev" id="lightbox-prev">❮</button>
+        <button class="lightbox-btn lightbox-next" id="lightbox-next">❯</button>
+      </div>
+    </div>
+
+    <!-- POPUP NOVIDADE -->
+    <div class="popup" id="popup">
+      <div class="popup-header">
+        <span class="popup-title">Última Hora</span>
+        <button class="popup-close" id="popup-close">×</button>
+      </div>
+      <div class="popup-text">
+        Captações abertas para as camadas jovens. Mostra o teu valor!
+      </div>
+      <a href="noticias.html" class="popup-link">Ver notícia →</a>
+    </div>
+
+    <!-- NEWS MODAL -->
+    <div class="modal-overlay" id="news-modal">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+            ></path>
+          </svg>
+        </button>
+        <div class="modal-img" id="modal-img"></div>
+        <div class="modal-body">
+          <div class="news-meta" style="margin-bottom: 12px">
+            <span class="news-tag" id="modal-tag"></span>
+            <span class="news-date" id="modal-date"></span>
+          </div>
+          <h2
+            id="modal-title"
+            style="
+              margin-bottom: 16px;
+              font-size: 24px;
+              color: var(--text-primary);
+            "
+          ></h2>
+          <div
+            id="modal-desc"
+            style="
+              color: var(--text-secondary);
+              line-height: 1.6;
+              margin-bottom: 24px;
+              font-size: 16px;
+            "
+          ></div>
+          <a
+            href=""
+            id="modal-link"
+            target="_blank"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: var(--accent);
+              color: var(--accent-text);
+              border-radius: 8px;
+              text-decoration: none;
+              font-weight: 600;
+            "
+            >Fonte Original →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
