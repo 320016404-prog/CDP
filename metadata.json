@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "CD Pedrulhense",
+  "description": "Website oficial do CD Pedrulhense.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
