@@ -509,15 +509,15 @@ body {
 }
 
 .slide-1 .hero-bg {
-  background: url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&q=80&w=2000")
+  background: url("images/hero-image.png")
     center/cover no-repeat;
 }
 .slide-2 .hero-bg {
-  background: url("/camisa1.jpg")
+  background: url("images/camisa1.jpg")
     center/cover no-repeat;
 }
 .slide-3 .hero-bg {
-  background: url("/presidente.jpg")
+  background: url("images/presidente.jpg")
     center/cover no-repeat;
 }
 
@@ -1008,22 +1008,22 @@ body {
 }
 
 .gallery-item:nth-child(1) .gallery-placeholder {
-  background-image: url("https://scontent.fopo5-1.fna.fbcdn.net/v/t39.30808-6/711269125_122102492913324024_841904442315283784_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1D9REXpUFU8Q7kNvwHgztrK&_nc_oc=Ado0fekGGZjcItj2TfM14xqlIzY64bT51MAKBKRUFWK8PIMGxj7ULwBo9xTVQXp-mWEjdIWVqrNwm8Jf0YZREznK&_nc_zt=23&_nc_ht=scontent.fopo5-1.fna&_nc_gid=R1lYeGx7Ti38EE6hMjqfsA&_nc_ss=7b2a8&oh=00_Af8mvvwGejzPoTPAcw7Dpd046-UaXZ90RQ9ZKmZKIdDTLA&oe=6A247CD7");
+  background-image: url("images/cdp1.jpg");
 }
 .gallery-item:nth-child(2) .gallery-placeholder {
-  background-image: url("https://scontent.fopo5-2.fna.fbcdn.net/v/t39.30808-6/711631884_122102496891324024_1353816480622013756_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Fjj9B5suRzMQ7kNvwGDrjWy&_nc_oc=Adotb4tLryWVWsydKn82_jGgYF0OgSyY0gtc5JCarqqsdaVZ9S28c20xiQcObTmBBJpCQ1ZgIjRJKgtC2AfUQuf4&_nc_zt=23&_nc_ht=scontent.fopo5-2.fna&_nc_gid=Comtn29haZUHLDPQQx-A3w&_nc_ss=7b2a8&oh=00_Af9qj9rp6tKs0RWwhYv7ZjkIfse93reiW6hqIL483t8EGw&oe=6A24748B");
+  background-image: url("images/cdp2.jpg");
 }
 .gallery-item:nth-child(3) .gallery-placeholder {
-  background-image: url("https://scontent.flis6-1.fna.fbcdn.net/v/t51.82787-15/705293731_18125180377620202_7807598748149163447_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=w9AZWI1Lu8YQ7kNvwHHGfa_&_nc_oc=AdrNSmV6W2ibNUFOabsyYay9fURXgY-_KdLZ8yEJpJLuWR8pXfQRByxDRpqIgYIRUqc&_nc_zt=23&_nc_ht=scontent.flis6-1.fna&_nc_gid=MVd0WIjGX-tmtA9h0wMIlg&_nc_ss=7b289&oh=00_Af_1YTVRT_HvJ4nTN5FUmjp9vUyCEcZzlukea9a-xAda8w&oe=6A26769D");
+  background-image: url("images/cdp3.jpg");
 }
 .gallery-item:nth-child(4) .gallery-placeholder {
-  background-image: url("https://scontent.flis6-1.fna.fbcdn.net/v/t51.82787-15/701785415_18124315447620202_8783350861313549699_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mPjZ68bbCc8Q7kNvwHLhgy0&_nc_oc=AdpTccvb7d69Ry_CwhtrvJki5CkptB0SBf8iyrCetvhg_yB0-wy8n2fo62N6eZ-rFuM&_nc_zt=23&_nc_ht=scontent.flis6-1.fna&_nc_gid=R3QfX6aC9ljJm2iBqLs8rw&_nc_ss=7b289&oh=00_Af-dtQHQ4VrEjgq1e5OXTQb2_suCWY5X0b-Q5gSLxbodOQ&oe=6A265AE6");
+  background-image: url("images/cdp4.jpg")
 }
 .gallery-item:nth-child(5) .gallery-placeholder {
-  background-image: url("https://scontent.flis6-1.fna.fbcdn.net/v/t51.82787-15/671199471_18121727863620202_5762930481904488697_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=p8ZeeiqIr_oQ7kNvwFzW-Qd&_nc_oc=Adq_rNDqOuRtZeTBheGy2khE8FmWNN9kcfbtWrUNhnXmRGs57XTbdl_Bikc8-uZPW7E&_nc_zt=23&_nc_ht=scontent.flis6-1.fna&_nc_gid=rhSK_EYZiUrolTFn5z9K4Q&_nc_ss=7b289&oh=00_Af__yFLJhIg9n5p1QC7ly9bCRSybGRWtWtV5JppIgkc5zA&oe=6A26571D");
+  background-image: url("images/cdp5.jpg");
 }
 .gallery-item:nth-child(6) .gallery-placeholder {
-  background-image: url("https://scontent.flis6-1.fna.fbcdn.net/v/t51.82787-15/656050065_18078394991434330_3910695072782992227_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UujLv6OcaqsQ7kNvwEfwMTZ&_nc_oc=Adp50KXJo3_IliuKLxKpBnHMtC2dpl5FsTU4BfBrx7NSwnjjVkXFugavpDdJn_NLI-M&_nc_zt=23&_nc_ht=scontent.flis6-1.fna&_nc_gid=wVd0CWuvANwABACSdaYnGw&_nc_ss=7b289&oh=00_Af_xGNIRJlj4PbGug9YP2RVyfWo_78VuAbg099UK6qucUw&oe=6A267953");
+  background-image: url("images/cdp6.jpg");
 }
 
 .gallery-overlay {
